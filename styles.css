@@ -56,3 +56,21 @@ input.search-bar {
 button:hover {
     background-color: #7c7c7c6b;
 }
+
+.description {
+    text-transform: capitalize;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.two-column {
+    justify-content: space-between;
+}
+
+img.icon {
+    margin-left: 10px;
+    height: 49px;
+}
