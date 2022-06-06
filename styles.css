@@ -5,10 +5,11 @@ body {
     height: 100vh;
     margin: 0;
     background: #222;
-    background-image: url("https://source.unsplash.com/1600x900/?landscape");
+    background-image: url("https://source.unsplash.com/1600x900/?city");
     background-repeat: no-repeat;
     background-size: cover;
-    font-family: 'Open Sans', sans-serif;    font-size: 120%;
+    font-family: 'Open Sans', sans-serif;    
+    font-size: 120%;
 }
 
 .cart {
@@ -77,4 +78,18 @@ img.icon {
 
 .hidden {
     display: none;
+}
+
+.weather.loading {
+    display: none;
+    max-height: 20px;
+    position: relative;
+}
+
+.weather.loading:after {
+    visibility: visible;
+    content: "Loading...";
+    color: white;
+    position: absolute;
+    top: 0;
 }
