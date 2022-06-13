@@ -17,9 +17,25 @@ let weather = {
         const {speed} = data.wind;
         const {sunrise} = data.sys;
         const {sunset} = data.sys;
-        console.log(name, icon, description, temp, humidity, speed, sunrise, sunset);
+        const sunriseTime = new Date(sunrise*1000);
+        sunriseHours = sunriseTime.getHours();
+        sunriseMinutes = sunriseTime.getMinutes();
+        const sunsetTime = new Date(sunset*1000);
+        sunsetHours = sunsetTime.getHours();
+        sunsetMinutes = sunsetTime.getMinutes();
+        console.log(name
+            , icon
+            , description
+            , temp
+            , humidity
+            , speed
+            , sunriseHours
+            , sunriseMinutes
+            , sunsetHours
+            , sunsetMinutes
+            );
         document.querySelector(".city").innerText = "Weather in " + name;
-        document.querySelector(".temp").innerText = temp + " °C";
+        document.querySelector(".temp").innerText = Math.round(temp) + " °C";
         document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
         document.querySelector(".description").innerText = description;
         document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
