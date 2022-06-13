@@ -18,11 +18,11 @@ let weather = {
         const {sunrise} = data.sys;
         const {sunset} = data.sys;
         const sunriseTime = new Date(sunrise*1000);
-        sunriseHours = sunriseTime.getHours();
-        sunriseMinutes = sunriseTime.getMinutes();
+        const sunriseHours = sunriseTime.getHours();
+        const sunriseMinutes = sunriseTime.getMinutes();
         const sunsetTime = new Date(sunset*1000);
-        sunsetHours = sunsetTime.getHours();
-        sunsetMinutes = sunsetTime.getMinutes();
+        const sunsetHours = sunsetTime.getHours();
+        const sunsetMinutes = sunsetTime.getMinutes();
         console.log(name
             , icon
             , description
@@ -38,8 +38,12 @@ let weather = {
         document.querySelector(".temp").innerText = Math.round(temp) + " °C";
         document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
         document.querySelector(".description").innerText = description;
-        document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
-        document.querySelector(".wind").innerText = "Wind speed: " + speed + " km/h";
+        document.querySelector(".humidity-text").innerText = humidity + "%";
+        document.querySelector(".wind-text").innerText = speed + " km/h";
+        /*
+        document.querySelector("sunrise-text").innerText = sunriseHours + " : " + sunriseMinutes;
+        document.querySelector("sunset-text").innerText = sunsetHours + " : " + sunsetMinutes;
+        */
         document.querySelector(".weather").classList.remove("loading");
         document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?"+ name +"')";
     },
