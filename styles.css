@@ -76,6 +76,17 @@ img.icon {
     height: 49px;
 }
 
+.mr {
+    margin-right: 3px;
+}
+
+.certainwidth {
+    width: 84px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .hidden {
     display: none;
 }

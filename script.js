@@ -40,10 +40,8 @@ let weather = {
         document.querySelector(".description").innerText = description;
         document.querySelector(".humidity-text").innerText = humidity + "%";
         document.querySelector(".wind-text").innerText = speed + " km/h";
-        /*
-        document.querySelector("sunrise-text").innerText = sunriseHours + " : " + sunriseMinutes;
-        document.querySelector("sunset-text").innerText = sunsetHours + " : " + sunsetMinutes;
-        */
+        document.querySelector(".sunrise-text").innerText = sunriseHours + " : " + sunriseMinutes;
+        document.querySelector(".sunset-text").innerText = sunsetHours + " : " + sunsetMinutes;
         document.querySelector(".weather").classList.remove("loading");
         document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?"+ name +"')";
     },
